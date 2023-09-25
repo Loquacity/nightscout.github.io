@@ -7,7 +7,7 @@
 This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start.
 
 ```{hint}
-*This wizard is designed for one Nightscout site, such as one patient with diabetes. If you need more than one Nightscout site you might need more accounts. Some hosted providers provide discounts and T1Pal support up to 5 patients per subscription.*
+*This wizard is thought for one Nightscout site (one patient with diabetes). If you need more Nightscout sites you might need more accounts. Some hosted providers provide discounts and T1Pal support up to 5 patients per subscription.*
 ```
 
 ```{admonition} Nightscout DIY rules
