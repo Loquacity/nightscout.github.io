@@ -2,7 +2,7 @@
 
 <img src="./img/wizard.png" />
 
-## Welcome to the Nightscout new user wizard.
+## Welcome to the Nightscout new user wizard
 
 This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start.
 
@@ -12,9 +12,9 @@ This set of questions will hopefully help choose the best solution for you, or a
 
 ```{admonition} Nightscout DIY rules
 :class: note
-If it's cheap and easy it might not be as reliable as you'd like
-If it's cheap and reliable it might be difficult to build or maintain
-If it's simple and reliable it might not be free
+If it's cheap and easy it might not be as reliable as you'd like.
+If it's cheap and reliable it might be difficult to build or maintain.
+If it's simple and reliable it might not be free.
 **Free, simple and reliable is not available.**
 ```
 
