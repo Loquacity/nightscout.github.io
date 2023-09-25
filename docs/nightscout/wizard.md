@@ -2,9 +2,9 @@
 
 <img src="./img/wizard.png" />
 
-## Welcome to the Nightscout new user wizard
+## Welcome to the Nightscout new user wizard.
 
-This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start.
+This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start. 
 
 ```{hint}
 *This wizard is thought for one Nightscout site (one patient with diabetes). If you need more Nightscout sites you might need more accounts. Some hosted providers provide discounts and T1Pal support up to 5 patients per subscription.*
@@ -12,9 +12,9 @@ This set of questions will hopefully help choose the best solution for you, or a
 
 ```{admonition} Nightscout DIY rules
 :class: note
-If it's cheap and easy it might not be as reliable as you'd like
-If it's cheap and reliable it might be difficult to build or maintain
-If it's simple and reliable it might not be free
+If it's cheap and easy it might not be as reliable as you'd like  
+If it's cheap and reliable it might be difficult to build or maintain  
+If it's simple and reliable it might not be free  
 **Free, simple and reliable is not available.**
 ```
 
@@ -29,83 +29,84 @@ If it's simple and reliable it might not be free
 <script>
 function Validate()
 {
- var dbAtla, dbAtlaP, dbRail, dbNort, dbVPS
- var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro, nsSerendipity
- var sDB, sNS
- sDB=""; sNS=""
- dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
- nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1;
- sel = document.getElementById("CONT");
- switch(sel.selectedIndex)
- {
-     case 0: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0;
-  nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0; nsSerendipity=0;
-  break;
- }
- sel = document.getElementById("SIMPLE");
- switch(sel.selectedIndex)
- {
-  case 0: dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1; nsHero=1; nsRail=1;
-       nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1;
-       sDB="[Reliability constrains removed for IT knowledgeable user]<br />";
-       sNS="[Reliability constrains removed for IT knowledgeable user]<br />"
-       break
-  case 1: dbVPS=0; nsFly=0; nsVPS=0; break
-  case 2: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsFly=0; nsRend=0; nsVPS=0; break
-  case 3: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsGoog=0; nsHero=0; nsRail=0; nsNort=0;
-    nsAzur=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
- }
- sel = document.getElementById("COST");
- switch(sel.selectedIndex)
- {
-  case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0;  break
-  case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
-  case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; break
-  case 3: nsT1Pal=0; nsSerendipity=0; break
-  case 4: break
- }
- sel = document.getElementById("RELY");
- switch(sel.selectedIndex)
- {
-  case 0: nsHero=0; dbAtla=0; dbRail=0; dbVPS=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
-  case 1: nsFly=0; break
-  case 2: break
- }
- if(dbAtla) sDB=sDB+" - Free MongoDB Atlas (limited to 512MiB) <br />"
- if(dbAtlaP) sDB=sDB+" - M2 MongoDB Atlas (9$/month) <br />"
- if(dbRail) sDB=sDB+" - Railway Mongo database (10$/GiB/month)<br />"
- if(dbNort) sDB=sDB+" - Northflank Mongo database (0.3$/GiB/month) <br />"
- if(dbVPS) sDB=sDB+" - VPS Mongo database (Oracle, Google, ...) <br />"
- if(nsT1Pal|ns10be|nsPro|nsSerendipity) sDB=sDB+" - Database included in the hosted service <br />"
- if(nsGoog) sDB=sDB+" - Database included in Google Cloud <br />"
- if(sDB=="") sDB="Uh... not many choices there, try to change some options and retry."
- document.getElementById("resultDB").innerHTML = sDB;
- if(sDB!=" - Database included in the hosted service"&sDB!="Uh... not many choices there, try to change some options and retry.")
- {
-  if(sDB!=" - Database included in Google Cloud <br />"&sDB!=" - Database included in the hosted service <br /> - Database included in Google Cloud <br />")
-  {
-   if(nsHero) sNS=sNS+" - Heroku Eco plan (5$/month) <br />"
-   if(nsRail) sNS=sNS+" - Railway Hobby plan (5$/month)<br />"
-   if(nsNort) sNS=sNS+" - Northflank Free Developer plan <br />"
-   if(nsAzur) sNS=sNS+" - Azure Basic plan (using always free services) <br />"
-   if(nsVPS) sNS=sNS+" - Oracle Cloud Free E2.1 micro tier <br />"
-   if(nsFly) sNS=sNS+" - Fly.io Free Hobby plan <br />"
+	var dbAtla, dbAtlaP, dbRail, dbNort, dbVPS
+	var nsHero, nsRail, nsNort, nsAzur, nsVPS, nsFly, nsRend, nsGoog, nsT1Pal, ns10be, nsPro, nsSerendipity
+	var sDB, sNS
+	sDB=""; sNS=""
+	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
+	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
+	sel = document.getElementById("CONT");
+	switch(sel.selectedIndex)
+	{
+	    case 0: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0;
+		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0; nsSerendipity=0; 
+		break;
+	}
+	sel = document.getElementById("SIMPLE");
+	switch(sel.selectedIndex)
+	{
+		case 0: dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1; nsHero=1; nsRail=1;
+	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
+	    		sDB="[Reliability constrains removed for IT knowledgeable user]<br />";
+	    		sNS="[Reliability constrains removed for IT knowledgeable user]<br />"
+	    		break
+		case 1: dbVPS=0; nsFly=0; nsVPS=0; break
+		case 2: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsFly=0; nsRend=0; nsVPS=0; break
+		case 3: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0; nsGoog=0; nsHero=0; nsRail=0; nsNort=0;
+				nsAzur=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
+	}
+	sel = document.getElementById("COST");
+	switch(sel.selectedIndex)
+	{
+		case 0: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsGoog=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0;  break
+		case 1: dbNort=0; nsHero=0; dbAtlaP=0; dbRail=0; nsT1Pal=0; ns10be=0; nsPro=0; nsRail=0; break
+		case 2: dbAtlaP=0; nsT1Pal=0; nsSerendipity=0; break
+		case 3: nsT1Pal=0; nsSerendipity=0; break
+		case 4: break
+	}
+	sel = document.getElementById("RELY");
+	switch(sel.selectedIndex)
+	{
+		case 0: nsHero=0; dbAtla=0; dbRail=0; dbVPS=0; nsFly=0; nsRend=0; nsGoog=0; nsVPS=0; break
+		case 1: nsFly=0; break
+		case 2: break
+	}
+	if(dbAtla) sDB=sDB+" - Free MongoDB Atlas (limited to 512MiB) <br />"
+	if(dbAtlaP) sDB=sDB+" - M2 MongoDB Atlas (9$/month) <br />"
+	if(dbRail) sDB=sDB+" - Railway Mongo database (10$/GiB/month)<br />"
+	if(dbNort) sDB=sDB+" - Northflank Mongo database (0.3$/GiB/month) <br />"
+	if(dbVPS) sDB=sDB+" - VPS Mongo database (Oracle, Google, ...) <br />"
+	if(nsT1Pal|ns10be|nsPro|nsSerendipity) sDB=sDB+" - Database included in the hosted service <br />"
+	if(nsGoog) sDB=sDB+" - Database included in Google Cloud <br />"
+	if(sDB=="") sDB="Uh... not many choices there, try to change some options and retry."
+	document.getElementById("resultDB").innerHTML = sDB;
+	if(sDB!=" - Database included in the hosted service"&sDB!="Uh... not many choices there, try to change some options and retry.")
+	{
+		if(sDB!=" - Database included in Google Cloud <br />"&sDB!=" - Database included in the hosted service <br /> - Database included in Google Cloud <br />")
+		{
+			if(nsHero) sNS=sNS+" - Heroku Eco plan (5$/month) <br />"
+			if(nsRail) sNS=sNS+" - Railway Hobby plan (5$/month)<br />"
+			if(nsNort) sNS=sNS+" - Northflank Free Developer plan <br />"
+			if(nsAzur) sNS=sNS+" - Azure Basic plan (using always free services) <br />"
+			if(nsVPS) sNS=sNS+" - Oracle Cloud Free E2.1 micro tier <br />"
+			if(nsFly) sNS=sNS+" - Fly.io Free Hobby plan <br />"
             if(nsRend) sNS=sNS+" - Render Free Instance <br />"
-  }
-  if(nsGoog) sNS=sNS+" - Google Cloud Free e2-micro tier <br />"
- }
- if(nsT1Pal) sNS=sNS+" - T1Pal Hosted Nightscout (11.99$/month) <br />"
- if(ns10be) sNS=sNS+" - NS10BE Hosted Nightscout (from €4.99/month) <br />"
- if(nsPro) sNS=sNS+" - Nightscout Pro Hosted service (3£/month) <br />"
- if(nsSerendipity) sNS=sNS+" - Serendipity Bio  Hosted service (12.99$/month) <br />"
- if(sNS=="") sNS="Uh... not many choices there, try to change some options and retry."
- document.getElementById("resultNS").innerHTML = sNS;
+		}
+		if(nsGoog) sNS=sNS+" - Google Cloud Free e2-micro tier <br />"
+	}
+	if(nsT1Pal) sNS=sNS+" - T1Pal Hosted Nightscout (11.99$/month) <br />"
+	if(ns10be) sNS=sNS+" - NS10BE Hosted Nightscout (from €4.99/month) <br />"
+	if(nsPro) sNS=sNS+" - Nightscout Pro Hosted service (3£/month) <br />"
+	if(nsSerendipity) sNS=sNS+" - Serendipity Bio  Hosted service (12.99$/month) <br />"
+	if(sNS=="") sNS="Uh... not many choices there, try to change some options and retry."
+	document.getElementById("resultNS").innerHTML = sNS;
 }
 </script>
 
+
 </br>
 
-Now click SHOW below to validate your choices.
+Now click SHOW below to validate your choices.  
 If you change any option above, validate again to update. </br></br>
 <button onclick="Validate()">-> SHOW</button>
 
@@ -125,30 +126,30 @@ Made you mind? Have a look at your options:
 
 ## <u>Hosted</u>
 
-[T1Pal](/index.md#t1pal)
-[NS10BE](/index.md#ns10be)
-[Nightscout.pro](/index.md#nightscout-pro)
+[T1Pal](/index.md#t1pal)  
+[NS10BE](/index.md#ns10be)  
+[Nightscout.pro](/index.md#nightscout-pro)  
 [Serendipity Bio](/index.md#serendipity-bio)
 
 ## <u>Database</u>
 
-[MongoDB Atlas](/vendors/mongodb/atlas.md)
-MongoDB Atlas M2 - Not documented: Hosted solutions are more economic
-[Railway Mongo Database](/vendors/railway/database.md)
-[Northflank Mongo Database](/vendors/northflank/database.md)
+[MongoDB Atlas](/vendors/mongodb/atlas.md)  
+MongoDB Atlas M2 - Not documented: Hosted solutions are more economic  
+[Railway Mongo Database](/vendors/railway/database.md)  
+[Northflank Mongo Database](/vendors/northflank/database.md)  
 VPS Mongo Database
 
 ## <u>Provider</u>
 
-[Heroku Eco plan](/vendors/heroku/new_user.md)
-[Railway](/vendors/railway/new_user.md)
-[Northflank](/vendors/northflank/new_user.md)
-[Fly.io](/vendors/fly.io/new_user.md)
-[Azure](/vendors/azure/new_user.md)
+[Heroku Eco plan](/vendors/heroku/new_user.md)  
+[Railway](/vendors/railway/new_user.md)  
+[Northflank](/vendors/northflank/new_user.md)  
+[Fly.io](/vendors/fly.io/new_user.md)  
+[Azure](/vendors/azure/new_user.md)  
 [Render](/vendors/render/new_user.md)
 
 ## <u>VPS</u>
 
-[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)
-[Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
+[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)  
+[Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)  
 [Advanced DIY](/nightscout/advanced)
