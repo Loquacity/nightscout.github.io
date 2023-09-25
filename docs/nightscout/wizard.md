@@ -4,17 +4,17 @@
 
 ## Welcome to the Nightscout new user wizard.
 
-This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start. 
+This set of questions will hopefully help choose the best solution for you, or at least give you hints on where to start.
 
 ```{hint}
-*This wizard is thought for one Nightscout site (one patient with diabetes). If you need more Nightscout sites you might need more accounts. Some hosted providers provide discounts and T1Pal support up to 5 patients per subscription.*
+*This wizard created one Nightscout site, for one patient with diabetes. If you need more than one Nightscout site you might need more accounts. Some hosted providers provide discounts and T1Pal support up to 5 patients per subscription.*
 ```
 
 ```{admonition} Nightscout DIY rules
 :class: note
-If it's cheap and easy it might not be as reliable as you'd like  
-If it's cheap and reliable it might be difficult to build or maintain  
-If it's simple and reliable it might not be free  
+If it's cheap and easy it might not be as reliable as you'd like
+If it's cheap and reliable it might be difficult to build or maintain
+If it's simple and reliable it might not be free
 **Free, simple and reliable is not available.**
 ```
 
@@ -34,19 +34,19 @@ function Validate()
 	var sDB, sNS
 	sDB=""; sNS=""
 	dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1;
-	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
+	nsHero=1; nsRail=1; nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1;
 	sel = document.getElementById("CONT");
 	switch(sel.selectedIndex)
 	{
 	    case 0: dbAtla=0; dbAtlaP=0; dbRail=0; dbNort=0; dbVPS=0;
-		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0; nsSerendipity=0; 
+		nsHero=0; nsRail=0; nsNort=0; nsAzur=0; nsVPS=0; nsFly=0; nsRend=0; nsGoog=0; ns10be=0; nsPro=0; nsSerendipity=0;
 		break;
 	}
 	sel = document.getElementById("SIMPLE");
 	switch(sel.selectedIndex)
 	{
 		case 0: dbAtla=1; dbAtlaP=1; dbRail=1; dbNort=1; dbVPS=1; nsHero=1; nsRail=1;
-	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1; 
+	    		nsNort=1; nsAzur=1; nsVPS=1; nsFly=1; nsRend=1; nsGoog=1; nsT1Pal=1; ns10be=1; nsPro=1; nsSerendipity=1;
 	    		sDB="[Reliability constrains removed for IT knowledgeable user]<br />";
 	    		sNS="[Reliability constrains removed for IT knowledgeable user]<br />"
 	    		break
@@ -106,7 +106,7 @@ function Validate()
 
 </br>
 
-Now click SHOW below to validate your choices.  
+Now click SHOW below to validate your choices.
 If you change any option above, validate again to update. </br></br>
 <button onclick="Validate()">-> SHOW</button>
 
@@ -126,30 +126,30 @@ Made you mind? Have a look at your options:
 
 ## <u>Hosted</u>
 
-[T1Pal](/index.md#t1pal)  
-[NS10BE](/index.md#ns10be)  
-[Nightscout.pro](/index.md#nightscout-pro)  
+[T1Pal](/index.md#t1pal)
+[NS10BE](/index.md#ns10be)
+[Nightscout.pro](/index.md#nightscout-pro)
 [Serendipity Bio](/index.md#serendipity-bio)
 
 ## <u>Database</u>
 
-[MongoDB Atlas](/vendors/mongodb/atlas.md)  
-MongoDB Atlas M2 - Not documented: Hosted solutions are more economic  
-[Railway Mongo Database](/vendors/railway/database.md)  
-[Northflank Mongo Database](/vendors/northflank/database.md)  
+[MongoDB Atlas](/vendors/mongodb/atlas.md)
+MongoDB Atlas M2 - Not documented: Hosted solutions are more economic
+[Railway Mongo Database](/vendors/railway/database.md)
+[Northflank Mongo Database](/vendors/northflank/database.md)
 VPS Mongo Database
 
 ## <u>Provider</u>
 
-[Heroku Eco plan](/vendors/heroku/new_user.md)  
-[Railway](/vendors/railway/new_user.md)  
-[Northflank](/vendors/northflank/new_user.md)  
-[Fly.io](/vendors/fly.io/new_user.md)  
-[Azure](/vendors/azure/new_user.md)  
+[Heroku Eco plan](/vendors/heroku/new_user.md)
+[Railway](/vendors/railway/new_user.md)
+[Northflank](/vendors/northflank/new_user.md)
+[Fly.io](/vendors/fly.io/new_user.md)
+[Azure](/vendors/azure/new_user.md)
 [Render](/vendors/render/new_user.md)
 
 ## <u>VPS</u>
 
-[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)  
-[Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)  
+[Google Cloud](https://navid200.github.io/xDrip/docs/Nightscout/GoogleCloud.html)
+[Oracle Cloud](https://www.dropbox.com/s/5twlqrndofqno0t/0-amber-oracle.pdf)
 [Advanced DIY](/nightscout/advanced)
